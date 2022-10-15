@@ -14,8 +14,8 @@
   This project was built to create a team profile generator that generates employee cards based on user input. Using this, users can quickly and easily create a team profile webpage highlighting basic information about various employees. I learned about writing and running tests as well as running various paths to different files. 
 
   ## Usage
-  To create a team profile webpage
-  https://app.castify.com/view/008d13e3-c087-48b7-8692-9627a31dfb7d
+  - To create a team profile webpage
+  - Walk-Through: https://app.castify.com/view/008d13e3-c087-48b7-8692-9627a31dfb7d
 
   ## Contributing
   undefined
