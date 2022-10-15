@@ -1,40 +1,41 @@
 const Employee = require('../lib/Employee');
+const employee = new Employee('Joey', "11", 'joeyck101@gmail.com');
 
 // creates employee object
 it('should create employee object', () => {
-    const employee = new Employee('Joey', id, 'joeyck101@gmail.com');
+    // const employee = new Employee('Joey', "11", 'joeyck101@gmail.com');
 
-    expect(employee.name).toEqual(expect.any(String));
-    expect(employee.id).toEqual(expect.any(Number));
-    expect(employee.email).toEqual(expect.any(String));
+    expect(employee.name).toBe("Joey");
+    expect(employee.id).toBe("11");
+    expect(employee.email).toBe("joeyck101@gmail.com");
 });
 
-// gets id from getId()
+// gets id from getName()
 it('should get employee name', () => {
-    const employee = new Employee('Joey', id, 'joeyck101@gmail.com');
+    // const employee = new Employee('Joey', "11", 'joeyck101@gmail.com');
 
-    expect(employee.getName()).toEqual(expect.any(String));
+    expect(employee.getName()).toBe("Joey");
 });
 
 // gets id from getId() 
 it('should get employee ID', () => {
-    const employee = new Employee('Joey', id, 'joeyck101@gmail.com');
+    // const employee = new Employee('Joey', "11", 'joeyck101@gmail.com');
 
-    expect(employee.getId()).toEqual(expect.any(Number));
+    expect(employee.getId()).toBe("11");
 });
 
 // gets emails from getEmail()
 it('should get employee email', () => {
-    const employee = new Employee('Joey', id, 'joeyck101@gmail.com');
+    // const employee = new Employee('Joey', "11", 'joeyck101@gmail.com');
 
-    expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
+    expect(employee.getEmail()).toBe(expect.stringContaining("joeyck101@gmail.com"));
 });
 
 // gets role from getRole()
 it('should get role of employee', () => {
-    const employee = new Employee('Joey', id, 'joeyck101@gmail.com');
+    // const employee = new Employee('Joey', "11", 'joeyck101@gmail.com');
 
-    expect(employee.getRole()).toEqual("Employee");
+    expect(employee.getRole()).toBe("Employee");
 }); 
 
 
