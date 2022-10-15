@@ -1,7 +1,7 @@
-const Manager = require('../lib/Manager.js');
-const Engineer = require('../lib/Engineer.js');
-const Intern = require('../lib/Intern.js');
-const generateHTML = require('../src/generateHTML.js');
+const Manager = require('./lib/Manager.js');
+const Engineer = require('./lib/Engineer.js');
+const Intern = require('./lib/Intern.js');
+const generateHTML = require('./src/generateHTML.js');
 
 let team = []
 const inquirer = require('inquirer');
@@ -18,7 +18,12 @@ function managerInfo() {
             },
             {
                 type: 'input',
-                name: 'office number',
+                name: 'id',
+                message: 'ID of the manager'
+            },
+            {
+                type: 'input',
+                name: 'officeNumber',
                 message: 'What is their office number?',
             },
             {
@@ -28,12 +33,13 @@ function managerInfo() {
             },
         ])
         .then((data) => {
-            const manager = new Manager(data.name, data.id, data.email, data.officeNumber)
+            const manager = new Manager(data.name, data.id, data.officeNumber, data.email)
             team.push(manager);
 
             addEmployee()
         });
 }
+
 
 const addEmployee = () => {
     inquirer.prompt([
@@ -46,10 +52,10 @@ const addEmployee = () => {
     ])
         .then(data => {
             switch (data.newEmployee) {
-                case 'intern'
+                case 'intern':
                     addIntern();
                     break;
-                case 'engineer'
+                case 'engineer':
                     addEngineer();
                     break;
                 case 'no other employees':
@@ -87,8 +93,12 @@ const addIntern = () => {
         message: 'What school do they attend?'
     }
 ])
+
+
 .then((data) => {
+    console.log(data);
     const intern = new Intern(data.name, data.id, data.email, data.school)
+            console.log(intern.getName());
             team.push(intern);
             addEmployee()
 }

@@ -1,16 +1,17 @@
 // Creates manager card:
+/* <i class="materials-icons">content_paste</i> */
 const generateManager = function (manager) {
     return`
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
                 <h3>${manager.name}</h3>
-                <h4>Manager</h4><i class="materials-icons">content_paste</i>
+                <h4>Manager</h4>
             </div>
 
             <div class="card-body">
                 <p class="id">ID: ${manager.id}</p>
-                <p class="email">Email: a href="malito:${manager.email}">${manager.email}</a></p>
+                <p class="email">Email:<a href="malito:${manager.email}">${manager.email}</a></p>
                 <p class="office">Office Number: ${manager.officeNumber}</p>
             </div>
 
@@ -20,20 +21,20 @@ const generateManager = function (manager) {
 }
 
 // Creates engineer card: 
-// TODO: Change material icon on line 30
+/* <i class="materials-icons">laptop_mac</i> */
 const generateEngineer = function (engineer) {
     return`
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
-                <h3>${engineer.name}</h3
-                <h4>Engineer</h4><i class="materials-icons">laptop_mac</i>
+                <h3>${engineer.name}</h3>
+                <h4>Engineer</h4>
             </div>
 
             <div class="card-body">
                 <p class="id">ID: ${engineer.id}</p>
-                <p class="email">Email: a href="malito:${engineer.email}">${engineer.email}</a></p>
-                <p class="github">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a</p>
+                <p class="email">Email:<a href="malito:${engineer.email}">${engineer.email}</a></p>
+                <p class="github">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
             </div>
 
         </div>
@@ -49,7 +50,7 @@ const generateIntern = function (intern) {
          <div class="card h-100">
             <div class="card-header">
                 <h3>${intern.name}</h3>
-                <h4>Intern</h4><i class="material-icons">assignment_ind</i>
+                <h4>Intern<i class="material-icons">assignment_ind</i></h4>
             </div>
 
             <div class="card-body">
@@ -129,7 +130,7 @@ generateHTML = (data) => {
           <div class="container">
               <div class="row justify-content-center" id="team-cards">
                   <!--Team Cards-->
-                  ${employeeCards}
+                  ${generatedTeam}
               </div>
           </div>
       </main>
