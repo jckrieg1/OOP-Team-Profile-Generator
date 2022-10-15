@@ -28,7 +28,7 @@ it('should get employee ID', () => {
 it('should get employee email', () => {
     // const employee = new Employee('Joey', "11", 'joeyck101@gmail.com');
 
-    expect(employee.getEmail()).toBe(expect.stringContaining("joeyck101@gmail.com"));
+    expect(employee.getEmail()).toBe("joeyck101@gmail.com");
 });
 
 // gets role from getRole()
